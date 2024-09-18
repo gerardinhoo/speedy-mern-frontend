@@ -2,7 +2,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 // Pages & Components
 import Home from './pages/Home';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import About from './components/About'
+
 
 const App = () => {
   return (
@@ -14,6 +16,10 @@ const App = () => {
             <Route 
               path="/" 
               element={<Home/>} 
+            />
+            <Route
+              path="/about"
+              element={<About />}
             />
          </Routes>
       </div>
