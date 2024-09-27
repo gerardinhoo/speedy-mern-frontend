@@ -1,5 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import PlayerDetails from '../components/PlayerDetails';
+import {Typography} from "@material-tailwind/react";
+import PlayerForm from '../components/PlayerForm';
+
 
 const Home = () => {
   const [players, setPlayers] = useState(null);
@@ -17,15 +21,19 @@ const Home = () => {
     fetchPlayers();
   }, [])
   return (
-    <div className='home'>
-      <div className='players'>
-         {
-          players && players.map(player => (
-            <p key={player._id}>{player.fullName}</p>
-          ))
-         }
+    <>
+      <Typography variant="h4" className="flex justify-center items-center mt-4 font-serif">Player's Bio</Typography>
+      <div className='home'>
+        <div className='players'>
+          {
+            players && players.map(player => (
+              <PlayerDetails key={player._id} player={player} />
+            ))
+          }
+        </div>
+      {/* <PlayerForm /> */}
       </div>
-    </div>
+    </>
   )
 }
 
