@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import PlayerDetails from '../components/PlayerDetails';
 import {Typography} from "@material-tailwind/react";
+import PlayerDetails from '../components/PlayerDetails';
 import PlayerForm from '../components/PlayerForm';
 
 
@@ -22,7 +22,7 @@ const Home = () => {
   }, [])
   return (
     <>
-      <Typography variant="h4" className="flex justify-center items-center mt-4 font-serif">Player's Bio</Typography>
+      <h1 className='player-infos'>Players Infos</h1>
       <div className='home'>
         <div className='players'>
           {
@@ -31,8 +31,8 @@ const Home = () => {
             ))
           }
         </div>
-      {/* <PlayerForm /> */}
       </div>
+      <PlayerForm />
     </>
   )
 }

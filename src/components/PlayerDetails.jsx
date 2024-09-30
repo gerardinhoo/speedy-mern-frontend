@@ -4,7 +4,7 @@ import { Card, CardBody, Typography} from "@material-tailwind/react";
  
 const PlayerDetails = ({player}) => {
   return (
-    <div className="flex justify-center items-center">
+    <div>
     <Card className="w-96 mt-5">
         <CardBody>
             <div>

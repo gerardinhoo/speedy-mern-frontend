@@ -10,3 +10,49 @@
       padding: 5rem
    }
  }
+
+ .player-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  align-items: center;
+  margin-right: 50%;
+ }
+
+ .player-button {
+  background-color: #1CAC78; /* Green */
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 5px;
+  cursor: pointer;
+ }
+
+.error {
+  color: #cc0033;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  float: left;
+  padding: 20px 30px;
+}
+
+.player-infos {
+  font-family: "Gill Sans", sans-serif;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 20px;
+}
+ 
