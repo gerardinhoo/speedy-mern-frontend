@@ -5,9 +5,11 @@ import {
   Input,
   Button,
 } from "@material-tailwind/react";
+import { usePlayersContext } from "../../src/hooks/usePlayersContext";
 
  
 const PlayerForm = () => {
+   const {dispatch} = usePlayersContext(); 
    const [fullName, setFullName] = useState('');
    const [origin, setOrigin] = useState('');
    const [favoriteNumber, setFavoriteNumber] = useState('');
@@ -36,6 +38,7 @@ const PlayerForm = () => {
       setFavoriteNumber('')
       setError(null)
       console.log('New Player Added', json)
+      dispatch({type: 'CREATE_PLAYERS', payload: json})
      }
    }
   return (

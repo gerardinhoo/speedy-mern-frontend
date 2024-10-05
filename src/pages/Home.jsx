@@ -1,12 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import {Typography} from "@material-tailwind/react";
 import PlayerDetails from '../components/PlayerDetails';
 import PlayerForm from '../components/PlayerForm';
+import { usePlayersContext } from '../hooks/usePlayersContext';
 
 
 const Home = () => {
-  const [players, setPlayers] = useState(null);
+  // const [players, setPlayers] = useState(null);
+  const {players, dispatch} = usePlayersContext()
 
   useEffect(() => {
     const fetchPlayers = async () => {
@@ -15,7 +16,8 @@ const Home = () => {
       const json = await response.json();
 
       if(response.ok) {
-        setPlayers(json);
+        // setPlayers(json);
+        dispatch({type: 'SET_PLAYERS', payload: json})
       }
     }
     fetchPlayers();
